@@ -98,7 +98,7 @@ const image = `${url}/og-image.jpg`;
 		min-width: 200%;
 		height: 100%;
 		object-fit: cover;
-		animation: moveLeft 80s linear infinite alternate ;
+		animation: moveLeft 60s ease-in-out infinite alternate ;
 	}
 
 	.animate-header {
@@ -109,11 +109,6 @@ const image = `${url}/og-image.jpg`;
 	.animate-footer {
 		display: inline-block;
 		animation: moveRight 40s linear infinite running;
-	}
-
-	.rtl-footer {
-		direction: rtl;
-		text-align: left;
 	}
 
 	@keyframes moveLeft {
