@@ -33,11 +33,20 @@ const image = `${url}/og-image.jpg`;
 	</head>
 	<body>
 		<div class="relative w-full h-full overflow-hidden overflow-y-auto">
-			<img src="/sky.jpg" alt="" class="moving-bg" />
+			<img src="/sky.webp" alt="" class="moving-bg" />
 
-			<header class="fixed top-0 left-0 w-full text-white overflow-hidden">
-				<div class="whitespace-nowrap animate-marquee leading-10 font-bold">
-					Argot. Todos los derechos reservados. // Argot. Todos los derechos reservados. // Argot. Todos los derechos reservados. // Argot. Todos los derechos reservados.
+			<header class="fixed top-0 left-0 w-full text-white backdrop-blur-sm overflow-hidden">
+				<div class="whitespace-nowrap animate-header leading-10 font-bold">
+					<span>
+						/// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
+            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
+            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
+            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina
+						/// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
+            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
+            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
+            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina
+					</span>
 				</div>
 			</header>
 
@@ -45,9 +54,29 @@ const image = `${url}/og-image.jpg`;
 				<slot />
 			</main>
 
-			<footer class="fixed bottom-0 left-0 w-full text-white overflow-hidden">
-				<div class="whitespace-nowrap animate-marquee leading-10 font-bold">
-					Argot. Todos los derechos reservados. // Argot. Todos los derechos reservados. // Argot. Todos los derechos reservados. // Argot. Todos los derechos reservados.
+			<footer class="fixed bottom-0 left-0 w-full text-white backdrop-blur-sm overflow-hidden">
+				<div class="whitespace-nowrap animate-footer leading-10 font-bold">
+					<span>
+						/// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
+            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
+            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
+            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina
+						/// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
+            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
+            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
+            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina
+					</span>
+          <!-- DISPLAY TRICK -->
+					<span aria-hidden="true">
+            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
+            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
+            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
+            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina
+						/// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
+            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
+            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
+            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina
+          </span>
 				</div>
 			</footer>
 		</div>
@@ -69,20 +98,39 @@ const image = `${url}/og-image.jpg`;
 		min-width: 200%;
 		height: 100%;
 		object-fit: cover;
-		animation: moveX 60s linear infinite alternate ;
+		animation: moveLeft 80s linear infinite alternate ;
 	}
 
-	.animate-marquee {
+	.animate-header {
 		display: inline-block;
-		animation: moveX 10s linear infinite running;
+		animation: moveLeft 20s linear infinite running;
 	}
 
-	@keyframes moveX {
+	.animate-footer {
+		display: inline-block;
+		animation: moveRight 20s linear infinite running;
+	}
+
+	.rtl-footer {
+		direction: rtl;
+		text-align: left;
+	}
+
+	@keyframes moveLeft {
 		from {
 			transform: translateX(0);
 		}
 		to {
 			transform: translateX(-50%);
+		}
+	}
+
+	@keyframes moveRight {
+		from {
+			transform: translateX(-50%);
+		}
+		to {
+			transform: translateX(0);
 		}
 	}
 </style>
