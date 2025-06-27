@@ -35,16 +35,20 @@ const image = `${url}/og-image.jpg`;
 		<div class="relative w-full h-full overflow-hidden overflow-y-auto">
 			<img src="/sky.jpg" alt="" class="moving-bg" />
 
-			<header class="fixed top-0 left-0 w-full z-10 backdrop-blur-sm text-white flex justify-center items-center">
-				Argot. Todos los derechos reservados. // Argot. Todos los derechos reservados. // Argot. Todos los derechos reservados.
+			<header class="fixed top-0 left-0 w-full text-white overflow-hidden">
+				<div class="whitespace-nowrap animate-marquee leading-10 font-bold">
+					Argot. Todos los derechos reservados. // Argot. Todos los derechos reservados. // Argot. Todos los derechos reservados. // Argot. Todos los derechos reservados.
+				</div>
 			</header>
 
 			<main class="relative z-10">
 				<slot />
 			</main>
 
-			<footer class="fixed bottom-0 left-0 w-full z-10 backdrop-blur-sm text-white flex justify-center items-center">
-				Argot. Todos los derechos reservados. // Argot. Todos los derechos reservados. // Argot. Todos los derechos reservados.
+			<footer class="fixed bottom-0 left-0 w-full text-white overflow-hidden">
+				<div class="whitespace-nowrap animate-marquee leading-10 font-bold">
+					Argot. Todos los derechos reservados. // Argot. Todos los derechos reservados. // Argot. Todos los derechos reservados. // Argot. Todos los derechos reservados.
+				</div>
 			</footer>
 		</div>
 	</body>
@@ -65,30 +69,21 @@ const image = `${url}/og-image.jpg`;
 		min-width: 200%;
 		height: 100%;
 		object-fit: cover;
-		animation: moveBg 60s linear infinite alternate ;
+		animation: moveX 60s linear infinite alternate ;
 	}
 
-	@keyframes moveBg {
+	.animate-marquee {
+		display: inline-block;
+		animation: moveX 10s linear infinite running;
+	}
+
+	@keyframes moveX {
 		from {
 			transform: translateX(0);
 		}
 		to {
 			transform: translateX(-50%);
 		}
-	}
-
-	@keyframes marquee {
-		0% {
-			transform: translateX(0%);
-		}
-		100% {
-			transform: translateX(-50%);
-		}
-	}
-
-	.animate-marquee {
-		display: inline-block;
-		animation: marquee 20s linear infinite;
 	}
 </style>
 
