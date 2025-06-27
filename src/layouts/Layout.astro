@@ -35,7 +35,7 @@ const image = `${url}/og-image.jpg`;
 		<div class="relative w-full h-full overflow-hidden overflow-y-auto">
 			<img src="/sky.webp" alt="" class="moving-bg" />
 
-			<header class="fixed top-0 left-0 w-full text-white backdrop-blur-sm overflow-hidden">
+			<header class="fixed top-0 left-0 w-full text-white bg-black/15 backdrop-blur-sm overflow-hidden">
 				<div class="whitespace-nowrap animate-header leading-10 font-bold">
 					<span>
 						/// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
@@ -54,7 +54,7 @@ const image = `${url}/og-image.jpg`;
 				<slot />
 			</main>
 
-			<footer class="fixed bottom-0 left-0 w-full text-white backdrop-blur-sm overflow-hidden">
+			<footer class="fixed bottom-0 left-0 w-full text-white bg-black/15 backdrop-blur-sm overflow-hidden">
 				<div class="whitespace-nowrap animate-footer leading-10 font-bold">
 					<span>
 						/// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
@@ -103,12 +103,12 @@ const image = `${url}/og-image.jpg`;
 
 	.animate-header {
 		display: inline-block;
-		animation: moveLeft 20s linear infinite running;
+		animation: moveLeft 40s linear infinite running;
 	}
 
 	.animate-footer {
 		display: inline-block;
-		animation: moveRight 20s linear infinite running;
+		animation: moveRight 40s linear infinite running;
 	}
 
 	.rtl-footer {
