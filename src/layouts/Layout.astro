@@ -34,7 +34,18 @@ const image = `${url}/og-image.jpg`;
 	<body>
 		<div class="relative w-full h-full overflow-hidden overflow-y-auto">
 			<img src="/sky.jpg" alt="" class="moving-bg" />
-			<slot />
+
+			<header class="fixed top-0 left-0 w-full z-10 backdrop-blur-sm text-white flex justify-center items-center">
+				Argot. Todos los derechos reservados. // Argot. Todos los derechos reservados. // Argot. Todos los derechos reservados.
+			</header>
+
+			<main class="relative z-10">
+				<slot />
+			</main>
+
+			<footer class="fixed bottom-0 left-0 w-full z-10 backdrop-blur-sm text-white flex justify-center items-center">
+				Argot. Todos los derechos reservados. // Argot. Todos los derechos reservados. // Argot. Todos los derechos reservados.
+			</footer>
 		</div>
 	</body>
 </html>
@@ -48,7 +59,7 @@ const image = `${url}/og-image.jpg`;
 	}
 
 	.moving-bg {
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
 		min-width: 200%;
@@ -58,12 +69,26 @@ const image = `${url}/og-image.jpg`;
 	}
 
 	@keyframes moveBg {
-	from {
-		transform: translateX(0);
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(-50%);
+		}
 	}
-	to {
-		transform: translateX(-50%);
+
+	@keyframes marquee {
+		0% {
+			transform: translateX(0%);
+		}
+		100% {
+			transform: translateX(-50%);
+		}
 	}
+
+	.animate-marquee {
+		display: inline-block;
+		animation: marquee 20s linear infinite;
 	}
 </style>
 
