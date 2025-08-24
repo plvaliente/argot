@@ -1,13 +1,13 @@
 export const siteLabels = {
   instagram: 'https://www.instagram.com/argot.colectivo/',
-  banner: '/// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina' +
-    '/// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina' +
-    '/// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina' +
-    '/// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina' +
-    '/// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina' +
-    '/// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina' +
-    '/// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina' +
-    '/// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina',
+  banner: '/// @argot.colectivo /// Buenos Aires, Argentina /// info@argot.com.ar' +
+    '/// @argot.colectivo /// Buenos Aires, Argentina /// info@argot.com.ar' +
+    '/// @argot.colectivo /// Buenos Aires, Argentina /// info@argot.com.ar' +
+    '/// @argot.colectivo /// Buenos Aires, Argentina /// info@argot.com.ar' +
+    '/// @argot.colectivo /// Buenos Aires, Argentina /// info@argot.com.ar' +
+    '/// @argot.colectivo /// Buenos Aires, Argentina /// info@argot.com.ar' +
+    '/// @argot.colectivo /// Buenos Aires, Argentina /// info@argot.com.ar' +
+    '/// @argot.colectivo /// Buenos Aires, Argentina /// info@argot.com.ar',
   description: {
     intro: `En un rincón del mundo donde el cielo parecía no tener fin, donde las 
     nubes danzaban con la brisa y el horizonte se fundía con la tierra, nació 

@@ -59,12 +59,8 @@ const showImageBg = Astro.props.showImageBg ?? false;
           />
         )
       }
-      <header
-        class="fixed top-0 left-0 w-full text-white bg-black/5 backdrop-blur-sm overflow-hidden"
-      >
-				<div
-					class="whitespace-nowrap inline-block animate-header leading-10 font-bold"
-				>
+      <header class="fixed top-0 left-0 w-full text-white overflow-hidden">
+				<div class="whitespace-nowrap inline-block animate-header leading-10 font-bold drop-shadow-[0_0_4px_rgba(0,0,0,3)]">
           <span>{siteLabels.banner}</span>
         </div>
       </header>
@@ -73,12 +69,8 @@ const showImageBg = Astro.props.showImageBg ?? false;
 				<slot />
 			</main>
 
-      <footer
-				class="fixed bottom-0 left-0 w-full text-white bg-black/5 backdrop-blur-sm overflow-hidden"
-      >
-				<div
-					class="whitespace-nowrap inline-block animate-footer leading-10 font-bold"
-				>
+      <footer class="fixed bottom-0 left-0 w-full text-white overflow-hidden">
+				<div class="whitespace-nowrap inline-block animate-footer leading-10 font-bold drop-shadow-[0_0_4px_rgba(0,0,0,3)]">
           <span>{siteLabels.banner}</span>
 					<!-- DISPLAY TRICK -->
           <span aria-hidden="true">{siteLabels.banner}</span>
@@ -89,12 +81,6 @@ const showImageBg = Astro.props.showImageBg ?? false;
 </html>
 
 <style>
-  html,
-  body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-  }
 
   .moving-bg {
     animation: moveLeft 60s ease-in-out infinite alternate;
