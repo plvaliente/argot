@@ -1,4 +1,5 @@
 ---
+import { siteLabels } from "../model/site-labels";
 import "./src/styles/global.css";
 
 const title = "Argot - Inflables para eventos";
@@ -37,16 +38,7 @@ const image = `${url}/og-image.jpg`;
 
 			<header class="fixed top-0 left-0 w-full text-white bg-black/15 backdrop-blur-sm overflow-hidden">
 				<div class="whitespace-nowrap animate-header leading-10 font-bold">
-					<span>
-						/// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
-            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
-            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
-            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina
-						/// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
-            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
-            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
-            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina
-					</span>
+					<span>{siteLabels.banner}</span>
 				</div>
 			</header>
 
@@ -56,27 +48,9 @@ const image = `${url}/og-image.jpg`;
 
 			<footer class="fixed bottom-0 left-0 w-full text-white bg-black/15 backdrop-blur-sm overflow-hidden">
 				<div class="whitespace-nowrap animate-footer leading-10 font-bold">
-					<span>
-						/// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
-            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
-            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
-            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina
-						/// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
-            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
-            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
-            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina
-					</span>
-          <!-- DISPLAY TRICK -->
-					<span aria-hidden="true">
-            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
-            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
-            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
-            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina
-						/// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
-            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
-            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina 
-            /// @argot.colectivo /// hola@argot.com.ar /// Buenos Aires, Argentina
-          </span>
+					<span>{siteLabels.banner}</span>
+          			<!-- DISPLAY TRICK -->
+					<span aria-hidden="true">{siteLabels.banner}</span>
 				</div>
 			</footer>
 		</div>
