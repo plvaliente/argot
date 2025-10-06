@@ -33,6 +33,12 @@ const showImageBg = Astro.props.showImageBg ?? false;
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
+
+    <!-- Fuente Acumin Variable Concept -->
+    <link
+      href="https://db.onlinewebfonts.com/c/066ce24dae3730ed6c648b09efaea93a?family=Acumin+Variable+Concept"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="relative w-full h-full overflow-hidden overflow-y-auto">
@@ -59,7 +65,7 @@ const showImageBg = Astro.props.showImageBg ?? false;
         )
       }
       <header class="fixed top-0 left-0 w-full text-white overflow-hidden">
-				<div class="whitespace-nowrap inline-block animate-header leading-10 font-bold drop-shadow-[0_0_4px_rgba(0,0,0,3)]">
+				<div class="whitespace-nowrap inline-block animate-header leading-10 text-lg font-bold drop-shadow-[0_0_2px_rgba(0,0,0,2)]">
           <span>{siteLabels.banner}</span>
         </div>
       </header>
@@ -69,7 +75,7 @@ const showImageBg = Astro.props.showImageBg ?? false;
 			</main>
 
       <footer class="fixed bottom-0 left-0 w-full text-white overflow-hidden">
-				<div class="whitespace-nowrap inline-block animate-footer leading-10 font-bold drop-shadow-[0_0_4px_rgba(0,0,0,3)]">
+				<div class="whitespace-nowrap inline-block animate-footer leading-10 text-lg font-bold drop-shadow-[0_0_2px_rgba(0,0,0,2)]">
           <span>{siteLabels.banner}</span>
 					<!-- DISPLAY TRICK -->
           <span aria-hidden="true">{siteLabels.banner}</span>
@@ -82,15 +88,15 @@ const showImageBg = Astro.props.showImageBg ?? false;
 <style>
 
   .moving-bg {
-    animation: moveLeft 60s ease-in-out infinite alternate;
+    animation: moveLeft 90s ease-in-out infinite alternate;
   }
 
   .animate-header {
-    animation: moveRight 60s linear infinite running;
+    animation: moveRight 90s linear infinite running;
   }
 
   .animate-footer {
-    animation: moveLeft 120s linear infinite running;
+    animation: moveLeft 180s linear infinite running;
   }
 
   @keyframes moveLeft {
