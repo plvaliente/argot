@@ -14,7 +14,7 @@ import { siteLabels } from "../model/site-labels";
 
 <section class="h-screen flex items-center justify-center px-4">
   <article
-    class="max-w-3xl text-white
+    class="fade-in max-w-3xl text-white
            px-6 py-8 md:px-10 md:py-12
            rounded-3xl backdrop-blur-md bg-white/5 ring-1 ring-white/10 shadow-2xl">
     <p class="prose prose-invert drop-shadow-[0_0_2px_rgba(0,0,0,2)] text-xl md:text-2xl leading-relaxed m-0">
@@ -22,3 +22,26 @@ import { siteLabels } from "../model/site-labels";
     </p>
   </article>
 </section>
+
+<style is:global>
+  /* Fallback para navegadores sin scroll animations */
+  .fade-in {
+    opacity: 1;
+  }
+
+  /* Scroll-driven fade */
+  @supports (animation-timeline: view()) {
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 3s ease-out forwards;
+      animation-timeline: view();
+      /* ajustá el rango de visibilidad en que ocurre el fade */
+      animation-range: entry 10% cover 40%;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+  }
+</style>
